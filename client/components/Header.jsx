@@ -121,21 +121,31 @@ export default class Header extends Component {
     const isAdmin = accessLevel.role === 3;
     return (
       <header className="dashboard-header">
+        <p>HELLO!!! This is the updated header</p>
         <nav title="header" role="navigation" className="navbar navbar-default">
           <div className="container">
-            <div id="header" className="navbar-header" style={{ width: '800px' }}>
+            <div
+              id="header"
+              className="navbar-header"
+              style={{ width: "800px" }}
+            >
               {this.renderTitle(isAdmin)}
             </div>
             <div id="navbar-collapse" className="collapse navbar-collapse">
               <ul className="nav navbar-nav navbar-right">
-                  <li className="dropdown">
-                  <span role="button" data-toggle="dropdown" data-target="#" className="btn-dro btn-username">
+                <li className="dropdown">
+                  <span
+                    role="button"
+                    data-toggle="dropdown"
+                    data-target="#"
+                    className="btn-dro btn-username"
+                  >
                     <img
                       role="presentation"
                       src={this.getPicture(issuer, user)}
                       className="picture avatar"
-                      alt={languageDictionary.adminAvatarTitle || 'Avatar'}
-                      title={languageDictionary.adminAvatarTitle || 'Avatar'}
+                      alt={languageDictionary.adminAvatarTitle || "Avatar"}
+                      title={languageDictionary.adminAvatarTitle || "Avatar"}
                     />
                     <span className="username-text">
                       {this.getName(issuer, user)}
